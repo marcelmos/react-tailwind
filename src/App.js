@@ -1,9 +1,11 @@
 import './App.css';
+import React, { useState } from 'react';
 import Block from './components/Block';
+import DataNode from './components/Navigation/DataNode';
 import Navigation from './components/Navigation/Navigation';
 
 function App() {
-
+  const [ dataInfo, setDataInfo ] = useState(0);
   const tmpData = {
     flowers: [
       {name: 'Strelicja Królewska', waterIn: 2, waterCycle: 7, image: 'strelicja_krolewska.webp'},
@@ -20,10 +22,11 @@ function App() {
       </div>
 
       <div className='py-5 px-3 bg-gray-100 min-h-full grid grid-cols-2 gap-3'>
-        {tmpData.flowers.map((itemData) => {
-          return <Block data={itemData} />
+        {tmpData.flowers.map((itemData, index) => {
+          return <Block setDataInfo={setDataInfo} data={itemData} />
         })}
       </div>
+      <DataNode dataInfo={dataInfo} dataDB={tmpData} />
 
       <Navigation />
     </main>
