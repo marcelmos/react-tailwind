@@ -28,7 +28,7 @@ code {
 }
 
 .nav-btn{
-  @apply  w-10 h-10 bg-gray-400 rounded-full text-white absolute transition-all shadow-md;
+  @apply  w-10 h-10 bg-gray-400 rounded-full text-white absolute transition-all shadow-md flex items-center justify-center;
 }
 
 
