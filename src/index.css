@@ -39,3 +39,38 @@ code {
 .show-right{
   @apply -right-10 -top-10;
 }
+
+.node-btn{
+  @apply py-4 shadow-md text-center text-white font-bold;
+}
+
+.data-node__back::after{
+  content: '';
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.data-node__visible,
+.form-node__visible,
+.setting-node__visible{
+  display: block;
+}
+.data-node__hidden-anim,
+.form-node__hidden-anim,
+.setting-node__hidden-anim{
+  display: block;
+}
+.data-node__hidden,
+.form-node__hidden,
+.setting-node__hidden{
+  display: none;
+}
+
+
+
